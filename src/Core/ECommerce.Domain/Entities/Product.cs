@@ -16,7 +16,7 @@ namespace ECommerce.Domain.Entities
         public Guid BrandId { get; set; }
         public Brand Brand { get; set; }
 
-        public List<Order> Orders { get; set; } = new List<Order>();
+        public List<Order> Orders { get; set; }
 
     }
 }

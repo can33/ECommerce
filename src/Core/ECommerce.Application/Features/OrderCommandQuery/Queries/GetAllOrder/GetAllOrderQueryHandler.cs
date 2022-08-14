@@ -19,7 +19,7 @@ namespace ECommerce.Application.Features.OrderCommandQuery.Queries.GetAllOrder
 
         public async Task<CustomResponseDto<List<OrderListDto>>> Handle(GetAllOrderQueryRequest request, CancellationToken cancellationToken)
         {
-            var orders = await _repository.GetAllOrderWithProducts();            
+            var orders = await _repository.GetAllOrderWithProducts();             
 
             var response = _mapper.Map<List<OrderListDto>>(orders);
 

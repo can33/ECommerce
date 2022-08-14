@@ -7,5 +7,6 @@ namespace ECommerce.Application.Repositories
     {
         Task<IEnumerable<Order>> GetAllOrderWithProducts();
         Task AddAsync(Order order);
+        Task<IEnumerable<Order>> GetOrdersById();
     }
 }

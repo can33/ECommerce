@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ECommerce.Application.Common.Exceptions;
 
 namespace ECommerce.Application.Features.ProductCommandQuery.Commands.RemoveProduct
 {
@@ -25,10 +26,10 @@ namespace ECommerce.Application.Features.ProductCommandQuery.Commands.RemoveProd
         public async Task<CustomResponseDto<NoContentDto>> Handle(RemoveProductCommandRequest request, CancellationToken cancellationToken)
         {
             var removeProduct = await _repository.GetByIdAsync(request.Id);
-            if (removeProduct == null)
-            {
-                return CustomResponseDto<NoContentDto>.Fail(404, "Kayıt bulunamadı");
-            }
+            
+            if (removeProduct is null)
+                throw new NotFoundException($"Product is not found");
+            
             await _repository.RemoveAsync(removeProduct);
 
             return CustomResponseDto<NoContentDto>.Success(204);

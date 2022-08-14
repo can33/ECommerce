@@ -1,14 +1,9 @@
 ﻿using AutoMapper;
-using MediatR;
 using ECommerce.Application.Dtos.CategoryDtos;
 using ECommerce.Application.Interfaces.Repository;
 using ECommerce.Application.Wrapper;
 using ECommerce.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using MediatR;
 
 namespace ECommerce.Application.Features.CategoryCommandQuery.Commands.AddCategory
 {

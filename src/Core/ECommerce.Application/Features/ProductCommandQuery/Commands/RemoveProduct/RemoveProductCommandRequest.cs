@@ -12,5 +12,10 @@ namespace ECommerce.Application.Features.ProductCommandQuery.Commands.RemoveProd
     public class RemoveProductCommandRequest : IRequest<CustomResponseDto<NoContentDto>>
     {
         public Guid Id { get; set; }
+
+        public RemoveProductCommandRequest(Guid id)
+        {
+            Id = id;
+        }
     }
 }

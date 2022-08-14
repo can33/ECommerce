@@ -1,11 +1,6 @@
-﻿using MediatR;
-using ECommerce.Application.Dtos;
+﻿using ECommerce.Application.Dtos.ProductDtos;
 using ECommerce.Application.Wrapper;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using MediatR;
 
 namespace ECommerce.Application.Features.ProductCommandQuery.Queries.GetProductById
 {

@@ -1,7 +1,7 @@
 ﻿using ECommerce.Application.Dtos.BrandDtos;
 using ECommerce.Application.Dtos.CategoryDtos;
 
-namespace ECommerce.Application.Dtos
+namespace ECommerce.Application.Dtos.ProductDtos
 {
     public class ProductListDto
     {

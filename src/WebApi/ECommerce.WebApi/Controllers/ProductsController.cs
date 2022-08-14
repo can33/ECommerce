@@ -31,7 +31,7 @@ namespace ECommerce.WebApi.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Remove(Guid id)
         {
-            return Ok(await _mediator.Send(new RemoveProductCommandRequest { Id = id }));
+            return Ok(await _mediator.Send(new RemoveProductCommandRequest(id)));
         }
         [HttpPost]
         public async Task<IActionResult> Add(AddProductCommandRequest request)

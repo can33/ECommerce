@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using MediatR;
-using ECommerce.Application.Dtos;
+using ECommerce.Application.Dtos.ProductDtos;
 using ECommerce.Application.Interfaces.Repository;
 using ECommerce.Application.Wrapper;
+using MediatR;
 
 namespace ECommerce.Application.Features.ProductCommandQuery.Queries.GetAllProduct
 {
