@@ -9,6 +9,6 @@ namespace ECommerce.Application.Dtos.CategoryDtos
     public class UpdateCategoryDto
     {
         public Guid Id { get; set; }
-        public string Defination { get; set; }
+        public string Name { get; set; }
     }
 }

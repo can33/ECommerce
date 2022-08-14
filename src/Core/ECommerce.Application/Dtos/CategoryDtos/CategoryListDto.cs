@@ -10,6 +10,6 @@ namespace ECommerce.Application.Dtos
     public class CategoryListDto
     {
         public Guid Id { get; set; }
-        public string Defination { get; set; }
+        public string Name { get; set; }
     }
 }

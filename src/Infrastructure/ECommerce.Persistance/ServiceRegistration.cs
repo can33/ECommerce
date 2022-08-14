@@ -36,6 +36,7 @@ namespace ECommerce.Persistance
             serviceCollection.AddTransient<IProductRepository, ProductRepository>();
             serviceCollection.AddTransient<ICategoryRepository, CategoryRepository>();
             serviceCollection.AddTransient<IBrandRepository, BrandRepository>();
+            serviceCollection.AddTransient<IOrderRepository, OrderRepository>();
 
             serviceCollection.AddAuthentication(options =>
             {

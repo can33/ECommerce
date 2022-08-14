@@ -26,7 +26,7 @@ namespace ECommerce.WebApi.Middlewares
                         var statusCode = exceptionFeature.Error switch
                         {
                             NotFoundException => (int)HttpStatusCode.NotFound,
-                            BadRequestException => (int)HttpStatusCode.BadRequest,
+                            BadRequestException => (int)HttpStatusCode.BadRequest,                            
                             _ => (int)HttpStatusCode.InternalServerError,
                         };
                         context.Response.StatusCode = statusCode;

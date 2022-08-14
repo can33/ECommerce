@@ -8,6 +8,6 @@ namespace ECommerce.Application.Dtos.CategoryDtos
 {
     public class CategoryForProductDto
     {
-        public string Defination { get; set; }
+        public string Name { get; set; }
     }
 }

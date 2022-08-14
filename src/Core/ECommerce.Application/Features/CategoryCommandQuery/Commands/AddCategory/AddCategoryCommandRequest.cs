@@ -6,6 +6,6 @@ namespace ECommerce.Application.Features.CategoryCommandQuery.Commands.AddCatego
 {
     public class AddCategoryCommandRequest : IRequest<CustomResponseDto<AddCategoryDto>>
     {
-        public string Defination { get; set; }
+        public string Name { get; set; }
     }
 }

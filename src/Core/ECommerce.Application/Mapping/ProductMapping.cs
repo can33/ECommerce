@@ -18,6 +18,7 @@ namespace ECommerce.Application.Mapping
             CreateMap<Product,UpdateProductCommandRequest>().ReverseMap();
             CreateMap<Product,ProductForCategoryDto>().ReverseMap();
             CreateMap<Product,ProductForBrandDto>().ReverseMap();
+            CreateMap<Product,ProductForOrderDto>().ReverseMap();
 
         }
     }
