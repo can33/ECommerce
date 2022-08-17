@@ -25,7 +25,8 @@ namespace ECommerce.WebApi.Controllers
         [HttpPost]
         public async Task<IActionResult> Add(AddOrderCommandRequest request)
         {
-            return Ok(await _mediator.Send(request));
+            var response = await _mediator.Send(request);
+            return StatusCode(201,response);
         }
     }
 }

@@ -37,17 +37,20 @@ namespace ECommerce.WebApi.Controllers
         [HttpPost]
         public async Task<IActionResult> Add(AddBrandCommandRequest request)
         {
-            return Ok(await _mediator.Send(request));
+            var response = await _mediator.Send(request);
+            return StatusCode(201,response);
         }
         [HttpPut]
         public async Task<IActionResult> Update(UpdateBrandCommandRequest request)
         {
-            return Ok(await _mediator.Send(request));
+            await _mediator.Send(request);
+            return NoContent();
         }
         [HttpDelete]
         public async Task<IActionResult> Remove(Guid id)
         {
-            return Ok(await _mediator.Send(new DeleteBrandCommandRequest(id)));
+            await _mediator.Send(new DeleteBrandCommandRequest(id));
+            return NoContent();
         }
 
     }
