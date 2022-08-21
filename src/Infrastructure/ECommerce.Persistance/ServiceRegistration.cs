@@ -16,8 +16,11 @@ namespace ECommerce.Persistance
 {
     public static class ServiceRegistration
     {
-        public static void AddPersistanceRegistration(this IServiceCollection serviceCollection, IConfiguration configuration)
+        public static void AddPersistanceRegistration(this IServiceCollection serviceCollection, IConfiguration configuration, string env = "Development")
         {
+            if (env == "Test")
+                serviceCollection.AddDbContext<ApplicationDbContext>(options => options.UseInMemoryDatabase(configuration["ConnectionStrings:DefaultConnection"]));
+
             serviceCollection.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(configuration["ConnectionStrings:DefaultConnection"]));
 
             //serviceCollection.AddDbContext<ApplicationPostgreSqlDbContext>(options => options.UseNpgsql(configuration["PostgreSql:PostgreSqlConnection"]));
